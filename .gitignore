@@ -1,4 +1,5 @@
 *.crt
+test.py
 
 # Environments
 .venv
