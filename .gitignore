@@ -4,3 +4,6 @@ test.py
 # Environments
 .venv
 *.env
+
+__pycache__/
+*.pyc
