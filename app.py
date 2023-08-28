@@ -4,12 +4,10 @@ from resources.whoishome import WhoIsHome
 from dotenv import load_dotenv
 
 load_dotenv()
-
-
-
-
 app = Flask(__name__)
 api = Api(app)
+
+
 
 class HelloWorld(Resource):
     def get(self):
@@ -17,11 +15,16 @@ class HelloWorld(Resource):
 
 api.add_resource(HelloWorld, '/')
 
+
+
 class StaticWhoIsHome(Resource):
     def get(self):
         return [{'name': 'Horacio'}, {'name': 'Johannes'}]
 
 api.add_resource(StaticWhoIsHome, '/whoishomestatic')
+
+
+
 
 api.add_resource(WhoIsHome, '/whoishome')
 
